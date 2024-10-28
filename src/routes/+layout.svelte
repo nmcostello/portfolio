@@ -11,7 +11,7 @@
 	</main>
 
 	<footer>
-		<p>thanks for checking this out ☺️</p>
+		<p>WIP - getting this setup - thanks for checking this out ☺️</p>
 	</footer>
 </div>
 
