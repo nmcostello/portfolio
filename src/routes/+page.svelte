@@ -25,8 +25,16 @@
 </section>
 <section>
 	<ul>
-		<li><button on:click|preventDefault={toggleAbout}>about</button></li>
-		<li><button on:click|preventDefault={toggleProjects}>projects</button></li>
+		<li>
+			<button class={showAbout ? 'button-active' : ''} on:click|preventDefault={toggleAbout}
+				>about</button
+			>
+		</li>
+		<li>
+			<button class={showProjects ? 'button-active' : ''} on:click|preventDefault={toggleProjects}
+				>projects</button
+			>
+		</li>
 		<li><a href="https://github.com/nmcostello" target="_blank"><button>github</button></a></li>
 		<li>
 			<a href="https://linkedin.com/in/noah-costello" target="_blank"><button>linkedin</button></a>
