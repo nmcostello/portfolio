@@ -2,23 +2,18 @@
 	import github from '$lib/images/github.svg';
 </script>
 
-<header>
-	<div class="corner">
-		<a href="https://github.com/nmcostello/svelte2">
-			<img src={github} alt="GitHub" />
-		</a>
-	</div>
-</header>
+<div class="corner">
+	<a href="https://github.com/nmcostello/svelte2">
+		<img src={github} alt="GitHub" />
+	</a>
+</div>
 
 <style>
-	header {
-		display: flex;
-		justify-content: space-between;
-	}
-
 	.corner {
 		width: 3em;
 		height: 3em;
+		top: 0;
+		right: 0;
 	}
 
 	.corner a {
