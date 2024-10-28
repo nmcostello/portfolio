@@ -1,6 +1,7 @@
 <script>
 	import About from './About.svelte';
 	import Projects from './Projects.svelte';
+	import { onMount } from 'svelte';
 
 	let showAbout = false;
 	let showProjects = false;

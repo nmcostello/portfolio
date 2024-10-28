@@ -111,6 +111,10 @@ ul li {
 button {
 	background-color: var(--button-color);
 	color: var(--button-text);
+	padding: 10px 30px;
+	border: none;
+	border-radius: 9999px;
+	transition: background-color 0.5s ease;
 }
 
 button:hover {
