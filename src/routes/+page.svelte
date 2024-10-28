@@ -25,10 +25,12 @@
 </section>
 <section>
 	<ul>
-		<li><a href="#" on:click|preventDefault={toggleAbout}>about</a></li>
-		<li><a href="#" on:click|preventDefault={toggleProjects}>projects</a></li>
-		<li><a href="https://github.com/nmcostello" target="_blank">github</a></li>
-		<li><a href="https://linkedin.com/in/noah-costello" target="_blank">linkedin</a></li>
+		<li><button on:click|preventDefault={toggleAbout}>about</button></li>
+		<li><button on:click|preventDefault={toggleProjects}>projects</button></li>
+		<li><a href="https://github.com/nmcostello" target="_blank"><button>github</button></a></li>
+		<li>
+			<a href="https://linkedin.com/in/noah-costello" target="_blank"><button>linkedin</button></a>
+		</li>
 	</ul>
 	{#if showAbout}
 		<About />
