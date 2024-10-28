@@ -27,6 +27,7 @@ body {
 h1,
 h2,
 p {
+	font-family: var(--font-mono);
 	font-weight: 400;
 }
 
@@ -98,4 +99,8 @@ button:focus:not(:focus-visible) {
 	position: absolute;
 	width: 1px;
 	white-space: nowrap;
+}
+
+ul li {
+	font-family: var(--font-mono);
 }

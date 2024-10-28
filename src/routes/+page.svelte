@@ -1,3 +1,20 @@
+<script>
+	import About from './About.svelte';
+	import Projects from './Projects.svelte';
+
+	let showAbout = false;
+	let showProjects = false;
+
+	function toggleAbout() {
+		showAbout = !showAbout;
+		showProjects = false;
+	}
+	function toggleProjects() {
+		showProjects = !showProjects;
+		showAbout = false;
+	}
+</script>
+
 <svelte:head>
 	<title>noah costello</title>
 	<meta name="description" content="personal site" />
@@ -8,10 +25,17 @@
 </section>
 <section>
 	<ul>
-		<li>about</li>
-		<li>github</li>
-		<li>linkedin</li>
+		<li><a href="#" on:click|preventDefault={toggleAbout}>about</a></li>
+		<li><a href="#" on:click|preventDefault={toggleProjects}>projects</a></li>
+		<li><a href="https://github.com/nmcostello" target="_blank">github</a></li>
+		<li><a href="https://linkedin.com/in/noah-costello" target="_blank">linkedin</a></li>
 	</ul>
+	{#if showAbout}
+		<About />
+	{/if}
+	{#if showProjects}
+		<Projects />
+	{/if}
 </section>
 
 <style>
