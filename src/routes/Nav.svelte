@@ -10,6 +10,20 @@
 			user-friendly applications. when i'm not coding, i enjoy spending time lifting, cooking, biking,
 			and exploring new technologies. feel free to connect with me on linkedin and github.
 		</p>
+
+        <div class="skills-section">
+          <h2>skills</h2>
+          <ul class="skills-list">
+            <li>system design</li>
+            <li>infrastructure</li>
+            <li>go</li>
+            <li>python</li>
+            <li>javaScript & typescript</li>
+            <li>docker</li>
+            <li>kubernetes</li>
+            <li>git</li>
+          </ul>
+        </div>
       `,
 		projects: `
         <p>under construction 🏗️ ... come back later</p>
@@ -65,5 +79,30 @@
 		padding: 40px;
 		margin: 40px auto;
 		max-width: 800px;
+	}
+
+	.skills-section {
+		margin-top: 40px;
+	}
+
+	.skills-section h2 {
+		margin-bottom: 20px;
+		font-size: 24px;
+	}
+
+	.skills-list {
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		padding: 0;
+		margin: -5px;
+	}
+
+	.skills-list li {
+		background-color: #f0f0f0;
+		border-radius: 20px;
+		padding: 10px 20px;
+		margin: 5px;
+		font-size: 16px;
 	}
 </style>
