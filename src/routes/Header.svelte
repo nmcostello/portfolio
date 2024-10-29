@@ -3,7 +3,7 @@
 </script>
 
 <div class="corner">
-	<a href="https://github.com/nmcostello/svelte2">
+	<a href="https://github.com/nmcostello/portfolio">
 		<img src={github} alt="GitHub" />
 	</a>
 </div>

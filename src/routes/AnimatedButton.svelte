@@ -1,6 +1,7 @@
 <script lang="ts">
 	export let label = 'Button';
 	export let clickHandler: (event: MouseEvent) => void;
+	let lastColor: string | null = null;
 
 	let animationFrame: number;
 
@@ -12,8 +13,14 @@
 
 		// Define an array of pastel colors
 		const colors = ['#FF6961', '#019563', '#FFB347']; // Pastel Red, Yellow, Green, Orange
-		// Randomly select a color
-		const color = colors[Math.floor(Math.random() * colors.length)];
+		// Exclude the last selected color
+		const availableColors = colors.filter((color) => color !== lastColor);
+
+		// Randomly select a color from the available colors
+		const color = availableColors[Math.floor(Math.random() * availableColors.length)];
+
+		// Update the lastColor
+		lastColor = color;
 
 		let startTime: number | null = null;
 		const maxSize = Math.sqrt(rect.width ** 2 + rect.height ** 2) * 2;
