@@ -2,29 +2,22 @@
 	import github from '$lib/images/github.svg';
 </script>
 
-<div class="corner">
-	<a href="https://github.com/nmcostello/portfolio">
+<div class="header">
+	<h1>noah costello</h1>
+	<a class="github-link" href="https://github.com/nmcostello/portfolio">
 		<img src={github} alt="GitHub" />
 	</a>
 </div>
 
 <style>
-	.corner {
-		width: 3em;
-		height: 3em;
-		top: 0;
-		right: 0;
-	}
-
-	.corner a {
+	.header {
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
+		padding: 1em;
 	}
 
-	.corner img {
+	.github-link img {
 		width: 2em;
 		height: 2em;
 		object-fit: contain;

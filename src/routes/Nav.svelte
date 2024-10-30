@@ -60,7 +60,7 @@
 	];
 </script>
 
-<div>
+<div class="button-container">
 	{#each buttons as { label, action }}
 		<AnimatedButton {label} clickHandler={action} />
 	{/each}
@@ -73,6 +73,10 @@
 {/if}
 
 <style>
+	.button-container {
+		display: flex;
+		justify-content: center; /* Centers items horizontally */
+	}
 	.content-box {
 		background-color: #ffffff;
 		border-radius: 25px; /* Heavy corner rounding */
