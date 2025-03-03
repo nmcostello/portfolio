@@ -46,6 +46,10 @@
 			action: () => (currentContent = contents.projects)
 		},
 		{
+			label: 'blog',
+			action: () => (window.location.href = '/blog')
+		},
+		{
 			label: 'github',
 			action: () => (window.location.href = 'https://github.com/nmcostello')
 		},
@@ -76,6 +80,7 @@
 	.button-container {
 		display: flex;
 		justify-content: center; /* Centers items horizontally */
+		flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 	}
 	.content-box {
 		background-color: #ffffff;
