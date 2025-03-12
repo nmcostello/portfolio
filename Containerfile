@@ -1,25 +1,21 @@
-# syntax=docker/dockerfile:1
+FROM node:18 AS build
 
-ARG NODE_VERSION=18.0.0
+WORKDIR /app
 
-FROM node:${NODE_VERSION}-alpine as base
-WORKDIR /usr/src/app
-EXPOSE 3000
+COPY package*.json .
 
-FROM base as build
-RUN --mount=type=bind,source=package.json,target=package.json \
-    --mount=type=bind,source=package-lock.json,target=package-lock.json \
-    --mount=type=cache,target=/root/.npm \
-    npm ci --include=dev
-USER node
+RUN npm ci
+
 COPY . .
-CMD npm run build
+RUN npm run build
 
-FROM base as prod
-RUN --mount=type=bind,source=package.json,target=package.json \
-    --mount=type=bind,source=package-lock.json,target=package-lock.json \
-    --mount=type=cache,target=/root/.npm \
-    npm ci --omit=dev
-USER node
-COPY . .
-CMD node build
+FROM node:18 AS run
+
+ENV NODE_ENV=production
+
+WORKDIR /app
+COPY --from=build /app/build ./build
+COPY --from=build /app/package.json ./package.json
+COPY --from=build /app/node_modules ./node_modules
+RUN ulimit -c unlimited
+ENTRYPOINT ["node", "build"]
