@@ -1,17 +1,38 @@
-# my svelte site
+# sv
 
-this is the repo for my svelete site that is hosted at https://noahcostello.io.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-here is the list of things that i'm tracking to get done:
-- [x] link to gh
-- [x] link to linkedin
-- [ ] about page - `WIP`
-- [ ] projects page - `WIP`
-- [ ] favorites page - links to blogs/youtubers/courses/books/projects that i like
-- [ ] make it really pretty and well designed - `WIP (always)`
-- [ ] metrics page - mem, cpu, page views, popular pages, etc.
-- [ ] make it mobile compatible
+## Creating a project
 
-## how it's built
+If you're seeing this, you've probably already done this step. Congrats!
 
-<img src="https://github.com/user-attachments/assets/bdba5728-759d-4d37-987e-a4f15425442b" alt="drawing" style="width:400px;"/>
+```bash
+# create a new project in the current directory
+npx sv create
+
+# create a new project in my-app
+npx sv create my-app
+```
+
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
