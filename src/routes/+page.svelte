@@ -16,7 +16,6 @@
 		display: flex;
 		flex-direction: column; /* Stack elements vertically */
 		align-items: center; /* Center horizontally */
-		background-color: #2d2926; /* Warmer charcoal background with brown undertones */
 		color: #f5f5f0; /* Warmer off-white text */
 	}
 
