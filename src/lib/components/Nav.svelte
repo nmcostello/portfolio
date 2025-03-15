@@ -12,8 +12,6 @@
 	<a class={path === '/blog' ? 'active' : ''} href="/blog">Blog</a>
 	<a class={path === '/background' ? 'active' : ''} href="/background">Background</a>
 	<a class={path === '/projects' ? 'active' : ''} href="/projects">Projects</a>
-
-	<p>{page.url.pathname}</p>
 </nav>
 
 <style>
@@ -22,12 +20,12 @@
 		text-align: center;
 		background-color: #333;
 		overflow: hidden;
+		padding: 10px;
 	}
 
 	/* Style the links inside the navigation bar */
 	.topnav a {
 		margin: auto;
-		float: left;
 		color: #f2f2f2;
 		text-align: center;
 		padding: 14px 16px;
